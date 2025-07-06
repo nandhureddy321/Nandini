@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script1.js"></script>
+    <title>Student details</title>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <td>
+          <form onsubmit="event.preventDefault();onFormSubmit();">
+            <h2>Enter student details</h2>
+            <div>
+              <label for="studentname">Name</label><br />
+              <input
+                type="text"
+                class="studentName"
+                id="studentName"
+                placeholder="Enter the student Name"
+              />
+            </div>
+            <div>
+              <label for="Collage">Collage</label><br />
+              <input
+                type="text"
+                class="studentCollage"
+                id="studentCollage"
+                placeholder="Enter the Collage"
+              />
+            </div>
+            <div>
+              <label for="Course">Course</label><br />
+              <input
+                type="text"
+                class="studentCourse"
+                id="studentCourse"
+                placeholder="Enter the Course name"
+              />
+            </div>
+<div>
+              <label for="Age">Age</label><br />
+              <input
+                type="number"
+                class="studentAge"
+                id="studentAge"
+                placeholder="Enter a Age "
+              />
+            </div>
+            <div>
+              <label for="Place">Place</label><br />
+              <input
+                type="text"
+                class="studentPlace"
+                id="studentPlace"
+                placeholder="Enter the adress of a student"
+              />
+            </div>
+            <div>
+              <input type="submit" value="submit" />
+            </div>
+          </form>
+        </td>
+        <td>
+          <table
+            class="list"
+            id="studentlist"
+            style="background-color: darkgoldenrod"
+          >
+            <thead>
+              <th>Name</th>
+              <th>Collage</th>
+              <th>Course</th>
+<th>Age</th>
+<th>Place</th>
+              <th>Action</th>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

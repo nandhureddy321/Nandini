@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tranind FeedBack Form</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Tranind FeedBack Form</h2>
+  <form id="FeedBack Form" onsubmit="showData(event)">
+    <label>
+      FacultyName:
+      <input type="text" id="name" required>
+    </label>
+
+    <label>
+   Training Attended:
+        <select id=" Training Attended" required>
+        <option value="">--SelectTraining --</option>
+        <option value="Python">Python</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="Css">Css</option>
+        <option value="Django">Django</option>
+</select>
+    </label>
+
+
+ <label>
+     Overall Rating:
+<br/>
+      <input type="checkbox" name="Overall Rating" value="Excellent"> Excellent
+      <input type="checkbox" name="Overall Rating" value="Good"> Good</br>
+      <input type="checkbox" name="Overall Rating" value="Average"> Average
+      <input type="checkbox" name="Overall Rating" value="Poor"> Poor
+    </label>
+
+    <label>
+      Topics Covered:<br/>
+      <select id="Topics Covered"></br>
+      <input type="checkbox" name="Topics Covered" value="Content Quality"> Content Quality</br>
+      <input type="checkbox" name="Topics Covered" value="Delivery">Delivery</br>
+      <input type="checkbox" name="Topics Covered" value="Interaction"> Interaction</br>
+      <input type="checkbox" name="Topics Covered" value="Relevance"> Relevance
+      </select>
+    </label>
+Suggestions/Comments:
+ <br>
+<textarea rows="5"cols="100"name="suggestions">
+Enter suggestions here
+</textarea>
+</label>
+    <button type="submitfeedback">Submitfeedback</button>
+  </form>
+
+  <script>
+    function showData(event) {
+      event.preventDefault(); // prevent actual form submission
+
+      let name = document.getElementById("name").value;
+      let gender = document.querySelector('input[name="gender"]:checked')?.value;
+      let country = document.getElementById("country").value;
+
+      let hobbies = [];
+      document.querySelectorAll('input[name="hobby"]:checked').forEach(cb => {
+        hobbies.push(cb.value);
+      });
+
+      let message = `Name: ${name}\nGender: ${gender}\nCountry: ${country}\nHobbies: ${hobbies.join(", ")}`;
+      alert(message);
+    }
+  </script>
+
+</body>
+</html>
+
+ 

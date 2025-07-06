@@ -1,0 +1,17 @@
+<!doctype html><html><head><script>
+function sub()
+{
+var num1,num2,sum;
+num1=parseInt(document.getElementById("txtFirstNumber").value);
+num2=parseInt(document.getElementById("txtSecondNumber").value);
+sub=num1+num2;
+document.getElementById("txtAnswer").value=sub;
+}
+</script></head>
+<body>
+<p>Frist Number:<input id="txtFirstNumber"></p>
+<p>Second Number:<input id="txtSecondNumber"></p>
+<button onclick="sub()">subtract Them</button>
+<p>Sub=<input id="txtAnswer"></p>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>College Canteens</title>
+</head>
+<body>
+    <h1>College Canteens</h1>
+    {% for canteen in canteens %}
+        <div style="border: 1px solid #ccc; padding: 10px;">
+            {% if canteen.logo %}
+                <img src="{{ canteen.logo.url }}" alt="{{ canteen.name }}" style="height: 100px;">
+            {% endif %}
+            <h2><a href="{% url 'canteen_detail' canteen.pk %}">{{ canteen.name }}</a></h2>
+        </div>
+    {% endfor %}
+</body>
+</html>

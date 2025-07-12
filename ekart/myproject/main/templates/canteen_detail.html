@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ canteen.name }}</title>
+</head>
+<body>
+    <h1>{{ canteen.name }}</h1>
+    {% if canteen.logo %}
+        <img src="{{ canteen.logo.url }}" alt="{{ canteen.name }}" style="height: 100px;">
+    {% endif %}
+
+    <h2>Menu Items</h2>
+    {% for item in canteen.menu_items.all %}
+        <div style="border: 1px solid #ccc; padding: 10px;">
+            {% if item.image %}
+                <img src="{{ item.image.url }}" alt="{{ item.name }}" style="height: 80px;">
+            {% endif %}
+            <h3>{{ item.name }}</h3>
+            <p>{{ item.description }}</p>
+            <p>Rs {{ item.price }}</p>
+        </div>
+    {% empty %}
+        <p>No items available.</p>
+    {% endfor %}
+
+    <a href="/">← Back to all canteens</a>
+</body>
+</html>

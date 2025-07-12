@@ -1,0 +1,19 @@
+<h2>Members List</h2>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Phone</th>
+    <th>Joined Date</th>
+  </tr>
+  {% for m in members %}
+    <tr>
+      <td>{{ m.id }}</td>
+      <td>{{ m.firstname }}</td>
+      <td>{{ m.lastname }}</td>
+      <td>{{ m.phone }}</td>
+      <td>{{ m.joined_date }}</td>
+    </tr>
+  {% endfor %}
+</table>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bakery myapp</title>
+    <style>
+        img { max-width: 150px; }
+        .bakery { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>Bakery</h1>
+    {% for Bakery in Bakery %}
+        <div class="Bakery">
+            {% if Bakery.image %}
+                <img src="{{Bakery.image.url }}" alt="{{Bakery.name }}">
+            {% endif %}
+            <h2><a href="{% url 'Bakery_detail' Bakery.pk %}">{{ Bakery.name }}</a></h2>
+            <p>${{ Bakery.price }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>

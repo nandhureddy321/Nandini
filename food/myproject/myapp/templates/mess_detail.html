@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ mess.name }}</title>
+</head>
+<body>
+    <h1>{{ mess.name }}</h1>
+    {% if mess.image %}
+        <img src="{{mess.image.url }}" alt="{{ mess.name }}">
+    {% endif %}
+    <p>{{mess.description }}</p>
+    <p>Price: Rs{{ mess.price }}</p>
+    <a href="/">Back to mess</a>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>canteen myapp</title>
+    <style>
+        img { max-width: 150px; }
+        .bakery { border: 1px solid #ccc; padding: 10px; margin: 10px; display: inline-block; }
+    </style>
+</head>
+<body>
+    <h1>canteen</h1>
+    {% for canteen in canteen %}
+        <div class="canteen">
+            {% if canteen.image %}
+                <img src="{{canteen.image.url }}" alt="{{canteen.name }}">
+            {% endif %}
+            <h2><a href="{% url 'canteen_detail' canteen.pk %}">{{ canteen.name }}</a></h2>
+            <p>${{ canteen.price }}</p>
+        </div>
+    {% endfor %}
+</body>
+</html>
